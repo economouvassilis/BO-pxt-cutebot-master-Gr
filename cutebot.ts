@@ -74,9 +74,9 @@ namespace cuteBot {
     * Line Sensor events    MICROBIT_PIN_EVT_RISE
     */
     export enum MbEvents {
-        //% block="Βρέθηκε" 
+        //% block="βρήκε γραμμή" 
         FindLine = DAL.MICROBIT_PIN_EVT_FALL,
-        //% block="Χαθηκε" 
+        //% block="έχασε γραμμή" 
         LoseLine = DAL.MICROBIT_PIN_EVT_RISE
     }
     /**
