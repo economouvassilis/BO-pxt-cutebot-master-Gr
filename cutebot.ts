@@ -37,11 +37,11 @@ namespace cuteBot {
     * Select the RGBLights on the left or right
     */
     export enum RGBLights {
-        //% blockId="Right_RGB" block="Right_RGB"
+        //% blockId="Δεξί_RGB" block="Δεξί_RGB"
         RGB_L = 1,
-        //% blockId="Left_RGB" block="Left_RGB"
+        //% blockId="Αριστερό_RGB" block="Αριστερό_RGB"
         RGB_R = 0,
-        //% blockId="ALL" block="ALL"
+        //% blockId="Όλα" block="Όλα"
         ALL = 3
     }
     /**
@@ -61,48 +61,48 @@ namespace cuteBot {
         L_R_unline
     }
     export enum Direction {
-        //% block="Forward" enumval=0
+        //% block="Μπροστά" enumval=0
         forward,
-        //% block="Backward" enumval=1
+        //% block="Πίσω" enumval=1
         backward,
-        //% block="Left" enumval=2
+        //% block="Δεξιά" enumval=2
         left,
-        //% block="Right" enumval=3
+        //% block="Αριστερά" enumval=3
         right
     }
     /**
     * Line Sensor events    MICROBIT_PIN_EVT_RISE
     */
     export enum MbEvents {
-        //% block="Found" 
+        //% block="Βρέθηκε" 
         FindLine = DAL.MICROBIT_PIN_EVT_FALL,
-        //% block="Lost" 
+        //% block="Χαθηκε" 
         LoseLine = DAL.MICROBIT_PIN_EVT_RISE
     }
     /**
      * Pins used to generate events
      */
     export enum MbPins {
-        //% block="Left" 
+        //% block="Δεξιά" 
         Left = DAL.MICROBIT_ID_IO_P13,
-        //% block="Right" 
+        //% block="Αριστερά" 
         Right = DAL.MICROBIT_ID_IO_P14
     }
     /**
      * IR controller button
      */
     export enum IRButtons {
-        //% blcok="Off"
+        //% blcok="Κλειστά"
         Off = 1,
         //% blcok="Menu"
         Menu = 2,
-        //% blcok="Up"
+        //% blcok="Πάνω"
         Up = 5,
-        //% blcok="Left"
+        //% blcok="Αριστερά"
         Left = 8,
-        //% blcok="Right"
+        //% blcok="Δεξιά"
         Right = 10,
-        //% blcok="Down"
+        //% blcok="Κάτω"
         Down = 13,
         //% blcok="OK"
         OK = 9,
@@ -110,7 +110,7 @@ namespace cuteBot {
         Plus = 4,
         //% blcok="Minus"
         Minus = 12,
-        //% blcok="Back"
+        //% blcok="Πίσω"
         Back = 6,
         //% block="0"
         Zero = 14,
