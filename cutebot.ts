@@ -565,9 +565,9 @@ namespace joystickbit {
 
 
     export enum ButtonType {
-        //% block="πάτημα"
+        //% block="παθήθηκε"
         down = PulseValue.High,
-        //% block="επαναφορά"
+        //% block="επανήλθε"
         up = PulseValue.Low
     }
 
@@ -597,7 +597,7 @@ namespace joystickbit {
     /**
     * Registers code to run when a joystick:bit event is detected.
     */
-    //% blockId=onButtonEvent block="Αν το button %button|είναι %event" blockExternalInputs=false
+    //% blockId=onButtonEvent block="Αν το button %button| %event" blockExternalInputs=false
     export function onButtonEvent(button: JoystickBitPin, event: ButtonType, handler: Action): void {
         pins.onPulsed(<number>button, <number>event, handler);
     }
@@ -624,7 +624,7 @@ namespace joystickbit {
     * vibration motor
     * @param time describe parameter here, eg: 100
     */
-    //% blockId=Vibration_Motor block="Dόνηση του Joystick:bit για %time ms"
+    //% blockId=Vibration_Motor block="Δόνηση του Joystick:bit για %time ms"
     export function Vibration_Motor(time: number): void {
         pins.digitalWritePin(DigitalPin.P16, 0)
         basic.pause(time)
