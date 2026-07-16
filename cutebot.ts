@@ -38,11 +38,11 @@ namespace cuteBot {
     * Select the RGBLights on the left or right
     */
     export enum RGBLights {
-        //% blockId="Δεξί_RGB" block="Δεξί_RGB"
+        //% blockId="δεξί_RGB" block="δεξί_RGB"
         RGB_L = 1,
-        //% blockId="Αριστερό_RGB" block="Αριστερό_RGB"
+        //% blockId="αριστερό_RGB" block="αριστερό_RGB"
         RGB_R = 0,
-        //% blockId="Όλα" block="Όλα"
+        //% blockId="όλα" block="όλα"
         ALL = 3
     }
     /**
@@ -62,13 +62,13 @@ namespace cuteBot {
         L_R_unline
     }
     export enum Direction {
-        //% block="Μπροστά" enumval=0
+        //% block="μπροστά" enumval=0
         forward,
-        //% block="Πίσω" enumval=1
+        //% block="πίσω" enumval=1
         backward,
-        //% block="Δεξιά" enumval=2
+        //% block="δεξιά" enumval=2
         left,
-        //% block="Αριστερά" enumval=3
+        //% block="αριστερά" enumval=3
         right
     }
     /**
@@ -287,7 +287,7 @@ namespace cuteBot {
     /**
     * TODO: stopcar
     */
-    //% blockId=cutebot_stopcar block="Σταμάτήστε αμέσως"
+    //% blockId=cutebot_stopcar block="Σταμάτησε αμέσως"
     //% weight=70
     export function stopcar(): void {
         motors(0, 0)
@@ -295,7 +295,7 @@ namespace cuteBot {
     /**
     * TODO: Set LED headlights.
     */
-    //% block="Όρισε %light LED με χρώμα $color"
+    //% block="Όρισε στο/στα %light LED χρώμα $color"
     //% color.shadow="colorNumberPicker"
     //% weight=65
     export function colorLight(light: RGBLights, color: number) {
@@ -312,7 +312,7 @@ namespace cuteBot {
     * @param B B color value of RGB color
     */
     //% inlineInputMode=inline
-    //% blockId=RGB block="Όρισε %light LED, με χρώμα R:%r G:%g B:%b"
+    //% blockId=RGB block="Όρισε στο/στα %light LED, χρώμα R:%r G:%g B:%b"
     //% r.min=0 r.max=255
     //% g.min=0 g.max=255
     //% b.min=0 b.max=255
@@ -419,7 +419,7 @@ namespace cuteBot {
     /**
     * TODO: Runs when line sensor finds or loses.
     */
-    //% block="%sensor|,  %event"
+    //% block="%sensor|, %event"
     //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=2
     //% event.fieldEditor="gridpicker" event.fieldOptions.columns=2
     //% weight=40
