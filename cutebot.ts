@@ -1,5 +1,6 @@
 /**
  * Functions to Cutebot by ELECFREAKS Co.,Ltd.
+ * Βασίλης Οικονόμου για τη προσαρμογή
  */
 //% weight=5 color=#0fbc11  icon="\uf207" 
 namespace cuteBot {
@@ -83,34 +84,34 @@ namespace cuteBot {
      * Pins used to generate events
      */
     export enum MbPins {
-        //% block="Δεξιά" 
+        //% block="δεξιά" 
         Left = DAL.MICROBIT_ID_IO_P13,
-        //% block="Αριστερά" 
+        //% block="αριστερά" 
         Right = DAL.MICROBIT_ID_IO_P14
     }
     /**
      * IR controller button
      */
     export enum IRButtons {
-        //% blcok="Κλειστά"
+        //% blcok="κλειστά"
         Off = 1,
-        //% blcok="Menu"
+        //% blcok="menu"
         Menu = 2,
-        //% blcok="Πάνω"
+        //% blcok="πάνω"
         Up = 5,
-        //% blcok="Αριστερά"
+        //% blcok="αριστερά"
         Left = 8,
-        //% blcok="Δεξιά"
+        //% blcok="δεξιά"
         Right = 10,
-        //% blcok="Κάτω"
+        //% blcok="κάτω"
         Down = 13,
         //% blcok="OK"
         OK = 9,
-        //% blcok="Plus"
+        //% blcok="plus"
         Plus = 4,
-        //% blcok="Minus"
+        //% blcok="minus"
         Minus = 12,
-        //% blcok="Πίσω"
+        //% blcok="πίσω"
         Back = 6,
         //% block="0"
         Zero = 14,
@@ -138,7 +139,7 @@ namespace cuteBot {
      * @param lspeed Left wheel speed 
      * @param rspeed Right wheel speed
      */
-    //% blockId=MotorRun block="Όρισε ταχύτητα αριστερού τροχού %lspeed\\% |δεξιού τροχού %rspeed\\%"
+    //% blockId=MotorRun block="Με ταχύτητα αριστερού τροχού στο %lspeed\\%,δεξιού τροχού %rspeed\\% κινήσου"
     //% lspeed.min=-100 lspeed.max=100
     //% rspeed.min=-100 rspeed.max=100
     //% weight=100
@@ -217,7 +218,7 @@ namespace cuteBot {
     /**
     * TODO: full speed move forward,speed is 100.
     */
-    //% blockId=cutebot_forward block="Κινήσου ευθεία με πλήρη ταχύτητα"
+    //% blockId=cutebot_forward block="Κινήσου μπροστά"
     //% weight=90
     export function forward(): void {
         // Add code here
@@ -235,7 +236,7 @@ namespace cuteBot {
     /**
     * TODO: full speed move back,speed is -100.
     */
-    //% blockId=cutebot_back block="Κινήσου αντίστροφα με πλήρη ταχύτητα"
+    //% blockId=cutebot_back block="Κινήσου προς τα πίσω"
     //% weight=85
     export function backforward(): void {
         // Add code here
@@ -252,7 +253,7 @@ namespace cuteBot {
     /**
     * TODO: full speed turnleft.
     */
-    //% blockId=cutebot_left block="Στρίψτε αριστερά με πλήρη ταχύτητα"
+    //% blockId=cutebot_left block="Στρίψτε αριστερά"
     //% weight=80
     export function turnleft(): void {
         // Add code here
@@ -269,7 +270,7 @@ namespace cuteBot {
     /**
     * TODO: full speed turnright.
     */
-    //% blockId=cutebot_right block="Στρίψε δεξιά με πλήρη ταχύτητα"
+    //% blockId=cutebot_right block="Στρίψε δεξιά"
     //% weight=75
     export function turnright(): void {
         // Add code here
@@ -286,7 +287,7 @@ namespace cuteBot {
     /**
     * TODO: stopcar
     */
-    //% blockId=cutebot_stopcar block="Σταματήστε αμέσως το αυτοκίνητο"
+    //% blockId=cutebot_stopcar block="Σταμάτήστε αμέσως"
     //% weight=70
     export function stopcar(): void {
         motors(0, 0)
@@ -294,7 +295,7 @@ namespace cuteBot {
     /**
     * TODO: Set LED headlights.
     */
-    //% block="Όρισε τους προβολείς LED %light χρώμα $color"
+    //% block="Όρισε %light LED με χρώμα $color"
     //% color.shadow="colorNumberPicker"
     //% weight=65
     export function colorLight(light: RGBLights, color: number) {
@@ -311,7 +312,7 @@ namespace cuteBot {
     * @param B B color value of RGB color
     */
     //% inlineInputMode=inline
-    //% blockId=RGB block="Όρισε τους προβολείς LED %light χρώμα R:%r G:%g B:%b"
+    //% blockId=RGB block="Όρισε %light LED, με χρώμα R:%r G:%g B:%b"
     //% r.min=0 r.max=255
     //% g.min=0 g.max=255
     //% b.min=0 b.max=255
@@ -345,7 +346,7 @@ namespace cuteBot {
     * Close all headlights.
     */
     //% inlineInputMode=inline
-    //% block="Σβήσε όλους τους προβολείς LED"
+    //% block="Σβήσε όλα τα LED"
     //% weight=55
     export function closeheadlights(): void {
         let buf = pins.createBuffer(4);
@@ -362,7 +363,7 @@ namespace cuteBot {
     * Judging the Current Status of Tracking Module. 
     * @param state Four states of tracking module
     */
-    //% blockId=ringbitcar_tracking block="Η κατάσταση παρακολούθησης γραμμής είναι %state"
+    //% blockId=ringbitcar_tracking block="Βρήκα γραμμή %state;"
     //% weight=50
     export function tracking(state: TrackingState): boolean {
         pins.setPull(DigitalPin.P13, PinPullMode.PullNone)
@@ -390,7 +391,7 @@ namespace cuteBot {
     * @param side Line sensor edge 
     * @param state Line sensor status
     */
-    //% block="%side αισθητήρας γραμμής %state"
+    //% block="%side ο αισθητήρας γραμμής %state"
     //% state.fieldEditor="gridpicker" state.fieldOptions.columns=2
     //% side.fieldEditor="gridpicker" side.fieldOptions.columns=2
     //% weight=45
@@ -418,7 +419,7 @@ namespace cuteBot {
     /**
     * TODO: Runs when line sensor finds or loses.
     */
-    //% block="Στη γραμμή %sensor|,  %event"
+    //% block="%sensor|,  %event"
     //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=2
     //% event.fieldEditor="gridpicker" event.fieldOptions.columns=2
     //% weight=40
@@ -430,7 +431,7 @@ namespace cuteBot {
     * Cars can extend the ultrasonic function to prevent collisions and other functions.. 
     * @param Sonarunit two states of ultrasonic module
     */
-    //% blockId=ultrasonic block="HC-SR04 Sonar unit %unit"
+    //% blockId=ultrasonic block="Τιμή από HC-SR04 Sonar σε %unit"
     //% weight=35
     export function ultrasonic(unit: SonarUnit, maxCmDistance = 500): number {
         // send pulse
@@ -484,7 +485,7 @@ namespace cuteBot {
 
     let IR_handling_flag = false
     //% weight=25
-    //% block="On IR receiving"
+    //% block="Όταν διαβάσω IR"
     export function IR_callback(handler: (code: number) => void) {
         pins.setPull(DigitalPin.P16, PinPullMode.PullUp)
         basic.forever(() => {
@@ -520,7 +521,7 @@ namespace cuteBot {
     /**
      * TODO: Get IR value
      */
-    //% block="IR Button %Button έχει πατηθεί"
+    //% block="Το κουμπί IR %Button έχει πατηθεί"
     //% weight=15
     export function IR_Button(Button: IRButtons): boolean {
         if (IR_Val == 0xffff) return false // over time
