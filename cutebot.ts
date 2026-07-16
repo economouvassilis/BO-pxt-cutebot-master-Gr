@@ -566,7 +566,7 @@ namespace joystickbit {
 
 
     export enum ButtonType {
-        //% block="παθήθηκε"
+        //% block="πατήθηκε"
         down = PulseValue.High,
         //% block="επανήλθε"
         up = PulseValue.Low
